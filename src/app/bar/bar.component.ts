@@ -14,7 +14,7 @@ export class BarComponent implements OnInit {
     { Framework: 'Backbone', Stars: '27647', Released: '2010' },
     { Framework: 'Ember', Stars: '21471', Released: '2011' },
   ];
-  public svg: any;
+  private svg: any;
   private margin = 50;
   private width = 750 - this.margin * 2;
   private height = 400 - this.margin * 2;
