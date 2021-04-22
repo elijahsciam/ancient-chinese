@@ -8,17 +8,9 @@ import { PieComponent } from './pie/pie.component';
 import { ScatterComponent } from './scatter/scatter.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    BarComponent,
-    PieComponent,
-    ScatterComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, BarComponent, PieComponent, ScatterComponent],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
