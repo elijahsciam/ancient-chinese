@@ -10,10 +10,9 @@ export class PieComponent implements OnInit {
   currentText: any;
   selectedTitle: any;
   selectedAuthor: any;
-  printText(event: any) {
+  printText() {
     const author = this.selectedAuthor;
     this.currentText = author.data[this.selectedTitle].body;
-    event.preventDefault();
   }
   selectAuthor(event: any) {
     const target = event.target.value;
