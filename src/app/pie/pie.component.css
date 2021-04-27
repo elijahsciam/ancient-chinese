@@ -1,0 +1,10 @@
+#poem {
+  font-size: 50px;
+  background-color: lavender;
+  color: black;
+}
+
+#error {
+  font-size: 20px;
+  color: red;
+}

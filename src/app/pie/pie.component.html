@@ -6,7 +6,8 @@
 </select>
 <form>
   <label for="title">Enter a number:</label>
-  <input type="number" id="titleNo" (keyup)="selectTitle($event)" />
+  <input id="titleNo" (keyup)="selectTitle($event)" />
   <input type="submit" value="Submit" (click)="printText($event)" />
+  <p id="error">{{ errorMessage }}</p>
 </form>
-<p>{{ currentText }}</p>
+<p id="poem">{{ currentText }}</p>
