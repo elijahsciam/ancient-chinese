@@ -1,6 +1,9 @@
 /* eslint-disable no-unused-vars */
 const fs = require('fs');
 
+const REGEX_CHINESE = /[\u4e00-\u9fff]|[\u3400-\u4dbf]|[\u{20000}-\u{2a6df}]|[\u{2a700}-\u{2b73f}]|[\u{2b740}-\u{2b81f}]|[\u{2b820}-\u{2ceaf}]|[\uf900-\ufaff]|[\u3300-\u33ff]|[\ufe30-\ufe4f]|[\uf900-\ufaff]|[\u{2f800}-\u{2fa1f}]/u;
+const isChinese = (str) => REGEX_CHINESE.test(str);
+
 const dictionary = fs.readFile(
   'src/app/pie/dict/cedict_ts.u8',
   'utf8',
@@ -11,8 +14,21 @@ const dictionary = fs.readFile(
 );
 
 const readData = (data) => {
-  const lines = data.split('\n').map((line) => {
-    const word = line.split('/');
-    console.log(word[0]);
+  let dict = {};
+  const lines = data.split('\n');
+  const chars_pinyin_english = lines.map((line) => {
+    return line.split('/');
+  });
+  const char_pinyin = chars_pinyin_english.map((word) => {
+    return word[0];
+  });
+  const simplifiedChar = char_pinyin.map((char) => {
+    let array = char.split(' ');
+    return array[1];
+  });
+  const traditionalChar = char_pinyin.map((char) => {
+    let array = char.split(' ');
+
+    return array[0];
   });
 };
