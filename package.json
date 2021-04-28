@@ -22,6 +22,7 @@
     "angular-spotify": "^1.5.1",
     "classical-chinese": "^0.0.7",
     "d3": "^6.6.2",
+    "file-system": "^2.2.2",
     "rxjs": "~6.6.0",
     "spotify-web-api-js": "^1.5.1",
     "tslib": "^2.0.0",
