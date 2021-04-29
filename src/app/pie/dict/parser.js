@@ -19,6 +19,9 @@ const readData = (data) => {
   const chars_pinyin_english = lines.map((line) => {
     return line.split('/');
   });
+  const english = chars_pinyin_english.map((word) => {
+    return word[1];
+  });
   const char_pinyin = chars_pinyin_english.map((word) => {
     return word[0];
   });
@@ -31,4 +34,7 @@ const readData = (data) => {
 
     return array[0];
   });
+  for (const sChar in simplifiedChar) {
+    dict[simplifiedChar[sChar]] = english[sChar];
+  }
 };
