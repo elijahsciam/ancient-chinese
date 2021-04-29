@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import laozi from 'src/texts/laozi';
 import dufu from 'src/texts/dufu';
+const dictionary = require('./dict/parser.js');
+
 @Component({
   selector: 'app-pie',
   templateUrl: './pie.component.html',
@@ -34,5 +36,7 @@ export class PieComponent implements OnInit {
     this.selectedTitle = parseInt(target);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(dictionary);
+  }
 }
